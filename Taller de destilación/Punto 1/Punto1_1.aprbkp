@@ -1,0 +1,202 @@
+MM "36.0" FLAVOR "NO" VERSION "36.0" DATETIME "Tue Jan 25 22:57:18 2022" 
+MACHINE "WIN-NT/VC" 
+? SETUP MAIN ? \ "RUN-CLASS" RUN-CLASS = PROP \ \ SIMULATE INTERACTIVE = NO 
+MOLEFLOW = MOLEFLOW \ ? SETUP GLOBAL ? \ "IN-UNITS" INSET = METCBAR \ ? SETUP 
+DIAGNOSTICS ? ? SETUP "SIM-OPTIONS" ? ; "METCBAR_MOLE" ; ? SETUP "UNITS-SET" 
+METCBAR ? \ DESCRIPTION DESCRIPTION = "User-defined units set" \ \ MMLOCAL \ 
+\ UNITSET BASESET = MET ( 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 5 3 4 3 3 3 3 
+3 3 3 3 4 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 5 3 3 3 3 3 3 5 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 7 3 3 3 3 3 
+3 3 3 ) \ ? DATABANKS ? \ DATABANKS \ ? COMPONENTS MAIN ? \ COMPONENTS CID = 
+METOH ANAME = CH4O OUTNAME = METOH DBNAME1 = "METHANOL" ANAME1 = "CH4O" /  
+CID = ACETONA ANAME = C3H6O-1 OUTNAME = ACETONA DBNAME1 = "ACETONE" ANAME1 = 
+"C3H6O-1" /  CID = CLOROFOR ANAME = CHCL3 OUTNAME = CLOROFOR DBNAME1 = 
+"CHLOROFORM" ANAME1 = "CHCL3" \ ? COMPONENTS "ADA/PCS" "LE-PROP-DATA" ? ; 
+"METCBAR_MOLE" ; ? COMPONENTS "COMP-LIST" GLOBAL ? ? COMPONENTS "UNIFAC-GROUP" 
+? ? PROPERTIES MAIN ? \ GPROPERTIES GBASEOPSET = WILSON GOPSETNAME = WILSON 
+PARCON = -2 \ ? PROPERTIES "OPTION-SETS" NRTL ? \ PARAM BASE = NRTL \ ? 
+PROPERTIES "OPTION-SETS" UNIFAC ? \ PARAM BASE = UNIFAC \ ? PROPERTIES 
+"OPTION-SETS" WILSON ? \ PARAM BASE = WILSON \ ? PROPERTIES "NC-PROPS" ? ? 
+PROPERTIES "MOLEC-STRUCT" ACETONA ? ? PROPERTIES "MOLEC-STRUCT" CLOROFOR ? ? 
+PROPERTIES "MOLEC-STRUCT" METOH ? ? PROPERTIES PARAMETERS SUMMARY ? ? 
+PROPERTIES PARAMETERS BINARY SCALAR "MLQKIJ-1" ? ; "ENG_MOLE" ; \ PROP-LIST 
+PARAMNAME = MLQKIJ SETNO = 1 UNITROW = 0 \ ? PROPERTIES PARAMETERS BINARY 
+SCALAR "RKTKIJ-1" ? ; "ENG_MOLE" ; \ PROP-LIST PARAMNAME = RKTKIJ SETNO = 1 
+UNITROW = 0 \ ? PROPERTIES PARAMETERS BINARY "T-DEPENDENT" "ANDKIJ-1" ? ; 
+"ENG_MOLE" ; \ PROP-LIST PARAMNAME = ANDKIJ SETNO = 1 UNITROW = 0 TUNITROW = 
+22 TUNITLABEL = F NEL = 2 \ ? PROPERTIES PARAMETERS BINARY "T-DEPENDENT" 
+"ANDMIJ-1" ? ; "ENG_MOLE" ; \ PROP-LIST PARAMNAME = ANDMIJ SETNO = 1 UNITROW
+ = 0 TUNITROW = 22 TUNITLABEL = F NEL = 2 \ ? PROPERTIES PARAMETERS BINARY 
+"T-DEPENDENT" "HENRY-1" ? ; "METCBAR_MOLE" ; \ PROP-LIST PARAMNAME = HENRY 
+SETNO = 1 UNITROW = 20 UNITLABEL = bar TUNITROW = 22 TUNITLABEL = C BDBANK = 
+( "APV100 BINARY" "APV100 HENRY-AP" ) NEL = 7 \ ? PROPERTIES PARAMETERS 
+BINARY "T-DEPENDENT" "MUKIJ-1" ? ; "ENG_MOLE" ; \ PROP-LIST PARAMNAME = MUKIJ 
+SETNO = 1 UNITROW = 0 TUNITROW = 22 TUNITLABEL = F NEL = 6 \ ? PROPERTIES 
+PARAMETERS BINARY "T-DEPENDENT" "MULIJ-1" ? ; "ENG_MOLE" ; \ PROP-LIST 
+PARAMNAME = MULIJ SETNO = 1 UNITROW = 0 TUNITROW = 22 TUNITLABEL = F NEL = 11 
+\ ? PROPERTIES PARAMETERS BINARY "T-DEPENDENT" "NRTL-1" ? ; "METCBAR_MOLE" ; 
+\ PROP-LIST PARAMNAME = NRTL SETNO = 1 UNITROW = 0 TUNITROW = 22 TUNITLABEL
+ = C BDBANK = ( "APV100 VLE-IG" "APV100 LLE-ASPEN" "APV100 VLE-LIT" ) NEL = 12 
+\ \ BPVAL PARAMNAME2 = NRTL CID1 = METOH CID2 = ACETONA UNITROW2 = 0 
+TUNITROW2 = 22 TUNITLABEL2 = C VAL1 = "APV100 VLE-IG" VAL2 = "APV100 VLE-IG" 
+VAL3 = "APV100 VLE-IG" VAL4 = "APV100 VLE-IG" VAL5 = "APV100 VLE-IG" VAL6 = 
+"APV100 VLE-IG" VAL7 = "APV100 VLE-IG" VAL8 = "APV100 VLE-IG" VAL9 = 
+"APV100 VLE-IG" VAL10 = "APV100 VLE-IG" VAL11 = "APV100 VLE-IG" VAL12 = 
+"APV100 VLE-IG" /  PARAMNAME2 = NRTL CID1 = METOH CID2 = CLOROFOR UNITROW2 = 0 
+TUNITROW2 = 22 TUNITLABEL2 = C VAL1 = "APV100 VLE-IG" VAL2 = "APV100 VLE-IG" 
+VAL3 = "APV100 VLE-IG" VAL4 = "APV100 VLE-IG" VAL5 = "APV100 VLE-IG" VAL6 = 
+"APV100 VLE-IG" VAL7 = "APV100 VLE-IG" VAL8 = "APV100 VLE-IG" VAL9 = 
+"APV100 VLE-IG" VAL10 = "APV100 VLE-IG" VAL11 = "APV100 VLE-IG" VAL12 = 
+"APV100 VLE-IG" /  PARAMNAME2 = NRTL CID1 = ACETONA CID2 = CLOROFOR UNITROW2
+ = 0 TUNITROW2 = 22 TUNITLABEL2 = C VAL1 = "APV100 VLE-IG" VAL2 = 
+"APV100 VLE-IG" VAL3 = "APV100 VLE-IG" VAL4 = "APV100 VLE-IG" VAL5 = 
+"APV100 VLE-IG" VAL6 = "APV100 VLE-IG" VAL7 = "APV100 VLE-IG" VAL8 = 
+"APV100 VLE-IG" VAL9 = "APV100 VLE-IG" VAL10 = "APV100 VLE-IG" VAL11 = 
+"APV100 VLE-IG" VAL12 = "APV100 VLE-IG" \ ? PROPERTIES PARAMETERS BINARY 
+"T-DEPENDENT" "WILSON-1" ? ; "METCBAR_MOLE" ; \ PROP-LIST PARAMNAME = WILSON 
+SETNO = 1 UNITROW = 0 TUNITROW = 22 TUNITLABEL = C BDBANK = ( "APV100 VLE-IG" 
+"APV100 VLE-LIT" ) NEL = 12 \ \ BPVAL PARAMNAME2 = WILSON CID1 = METOH CID2
+ = ACETONA UNITROW2 = 0 TUNITROW2 = 22 TUNITLABEL2 = C VAL1 = "APV100 VLE-IG" 
+VAL2 = "APV100 VLE-IG" VAL3 = "APV100 VLE-IG" VAL4 = "APV100 VLE-IG" VAL5 = 
+"APV100 VLE-IG" VAL6 = "APV100 VLE-IG" VAL7 = "APV100 VLE-IG" VAL8 = 
+"APV100 VLE-IG" VAL9 = "APV100 VLE-IG" VAL10 = "APV100 VLE-IG" VAL11 = 
+"APV100 VLE-IG" VAL12 = "APV100 VLE-IG" /  PARAMNAME2 = WILSON CID1 = METOH 
+CID2 = CLOROFOR UNITROW2 = 0 TUNITROW2 = 22 TUNITLABEL2 = C VAL1 = 
+"APV100 VLE-IG" VAL2 = "APV100 VLE-IG" VAL3 = "APV100 VLE-IG" VAL4 = 
+"APV100 VLE-IG" VAL5 = "APV100 VLE-IG" VAL6 = "APV100 VLE-IG" VAL7 = 
+"APV100 VLE-IG" VAL8 = "APV100 VLE-IG" VAL9 = "APV100 VLE-IG" VAL10 = 
+"APV100 VLE-IG" VAL11 = "APV100 VLE-IG" VAL12 = "APV100 VLE-IG" /  PARAMNAME2
+ = WILSON CID1 = ACETONA CID2 = CLOROFOR UNITROW2 = 0 TUNITROW2 = 22 
+TUNITLABEL2 = C VAL1 = "APV100 VLE-IG" VAL2 = "APV100 VLE-IG" VAL3 = 
+"APV100 VLE-IG" VAL4 = "APV100 VLE-IG" VAL5 = "APV100 VLE-IG" VAL6 = 
+"APV100 VLE-IG" VAL7 = "APV100 VLE-IG" VAL8 = "APV100 VLE-IG" VAL9 = 
+"APV100 VLE-IG" VAL10 = "APV100 VLE-IG" VAL11 = "APV100 VLE-IG" VAL12 = 
+"APV100 VLE-IG" \ ? PROPERTIES PARAMETERS UNIBINARY SCALAR "GMUFB-1" ? ; 
+"METCBAR_MOLE" ; \ PROP-LIST PARAMNAME = GMUFB SETNO = 1 UNITROW = 0 \ ? 
+PROPERTIES "ATTR-COMPS" ? ? POLYMERS ? ? REPORT "STREAM-REPOR" ? \ OPTIONS 
+MOLEFLOW = MOLEFLOW \ ? "PROP-TABLE" BINARY "1-5-10-B" ? ; "METCBAR_MOLE" ; \ 
+PROPERTIES OPSETNAME = WILSON FRWATEROPSET = "STEAM-TA" SOLU-WATER = 3 
+TRUE-COMPS = YES \ \ "MASS-FLOW" COMP1 = METOH COMP2 = ACETONA \ \ STATE 
+VFRAC = 0.0 <0> <0> PRES = 1.013250000 <20> <5> GUNITLABEL = "cal/mol" \ \ 
+ANALTYP ANALTYPE = TXY \ \ TVARY TVARNAME = TEMP TUNITLABEL = C TVARVALUE = 
+LIST TLIST = ( 25.00000000 <0> <0> ) \ \ PVARY PVARNAME = PRES PUNITLABEL = 
+bar PVARVALUE = LIST PLIST = ( 1. <0> <0> 5. <0> <0> 10. <0> <0> ) \ \ CVARY 
+CVARNAME = MOLEFRAC CCOMP = METOH VARVALUE = RANGE CLOWER = 0.0 <0> <0> 
+CUPPER = 1.0 <0> <0> CINCR = 0.010000 <0> <0> CNPOINT = 100 \ \ PARAM NPHASE
+ = 3 TAGID = "BINRY-3" \ \ PROPTY LOCALPROP = WILSON \ \ P2 PCOMPS1 = METOH 
+PCOMPS2 = ACETONA \ 
+
+ GRAPHICS_BACKUP
+PFS V NONE
+$CONFIG
+paramdata APV100 ENRTL-RK
+paramdata APV100 VLE-IG
+paramdata APV100 VLE-RK
+paramdata APV100 VLE-HOC
+paramdata APV100 LLE-LIT
+paramdata APV100 LLE-ASPEN
+paramdata APV100 VLE-LIT
+paramdata APV100 BINARY
+paramdata APV100 EOS-LIT
+paramdata APV100 HENRY-AP
+paramdata APV100 SRK-ASPEN
+paramdata APV100 PC-SAFT
+paramdata APV100 POLYPCSF
+paramdata APV100 HYSYS
+paramdata APESV100 AP-EOS
+paramdata NISTV100 NIST-HOC
+paramdata NISTV100 NIST-IG
+paramdata NISTV100 NIST-RK
+paramdata NISTV100 NIST-EOS
+purebank APV100 PURE36
+purebank APV100 AQUEOUS
+purebank APV100 SOLIDS
+purebank APV100 INORGANIC
+purebank APESV100 AP-EOS
+purebank NISTV100 NIST-TRC
+regdbank 1
+ftn_check 1
+autoblockid 1
+autostreamid 1
+showblockid 1
+showstreamid 1
+autoplacement 1
+grid 2
+gridresolution 0.100000
+scale 0
+streamprefix 
+blockprefix B
+labelscale 1.000000
+qwformat %.0f
+tempformat %.0f
+presformat %.0f
+flowformat %.0f
+strmqwformat %.0f
+vflowformat %.0f
+mflowformat %.0f
+vfracformat %.0f
+pseudobatch 0
+partial 1
+animation 1
+runanyway 0
+globalqw 0
+globaltemp 0
+globalpres 0
+globalflow 0
+globalstrmqw 0
+globalvflow 0
+globalmflow 0
+globalvfrac 0
+browserheight 6375
+browserwidth 9000
+browsertreewidth 2370
+polyplusenabled 1
+dynaplusenabled 1
+bfracenabled 1
+rtfenabled 1
+rspenabled 0
+pinchenabled 0
+linklimit 5000
+material_color 0
+material_style 0
+material_width 1
+heat_color 0
+heat_style 2
+heat_width 1
+heat_termid Q
+work_color 0
+work_style 1
+work_width 1
+work_termid W
+connections_color 9
+connections_style 3
+connections_width 1
+measurements_color 4
+measurements_style 3
+measurements_width 1
+displayeoconn 0
+displayeomeas 1
+displayeomeastype 2
+showeoviews 0
+eoautosave 1
+allow_system_userprops 0
+copy_estimation 1
+copy_retrieved 1
+purge_incomp_params 0
+set_default_biparams 0
+set_default_dataset1 0
+set_default_dataset0 1
+roottype 0
+exchangerfile 1
+streamformat 1
+runsettingfile 1
+usermodelfile 1
+fortranfile 0
+timeout 1000
+sumcount 1
+#
+$_APWNSHELL_SETTINGS
+<FileRootSettings><CaseFileSettings>&lt;CaseFileSettings xmlns="clr-namespace:AspenTech.AspenPlus.Infrastructure;assembly=AspenTech.AspenPlus.Infrastructure" /&gt;</CaseFileSettings><CommonShellSettings>&lt;CommonShellSettings xmlns="http://schemas.aspentech.com/xaml/presentation/visualisation/commonshell" xmlns:atapmaa="clr-namespace:AspenTech.AspenPlus.Modules.ApwnApplication;assembly=ApwnShell" xmlns:atapie="clr-namespace:AspenTech.AspenPlus.Infrastructure.Events;assembly=AspenTech.AspenPlus.Infrastructure" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:apmab="clr-namespace:AspenPlus.Modules.ApwnBrowser;assembly=ApwnShell" xmlns:cxv="http://schemas.aspentech.com/xaml/presentation/cxsviewmodel"&gt;&lt;CommonShellSettings.CurrentWorkspace&gt;&lt;ShellWorkspace Layout="&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&amp;#xD;&amp;#xA;&amp;lt;xamDockManager version=&amp;quot;15.1.20151.2055&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;contentPanes&amp;gt;&amp;#xD;&amp;#xA;    &amp;lt;contentPane name=&amp;quot;_AnonymousScreen2&amp;quot; location=&amp;quot;Document&amp;quot; lastActivatedTime=&amp;quot;2022-01-26T03:57:11.084765Z&amp;quot; /&amp;gt;&amp;#xD;&amp;#xA;    &amp;lt;contentPane name=&amp;quot;StartPageScreenFactory&amp;quot; location=&amp;quot;Document&amp;quot; lastActivatedTime=&amp;quot;2022-01-26T03:35:28.1901157Z&amp;quot; /&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;/contentPanes&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;documents splitterOrientation=&amp;quot;Vertical&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;    &amp;lt;splitPane name=&amp;quot;Z959aad48bed84bb8b02cf75317f204e1&amp;quot; splitterOrientation=&amp;quot;Vertical&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;      &amp;lt;tabGroup name=&amp;quot;Z5f31cd37a5c64542bb288cf2da299cd7&amp;quot; selectedIndex=&amp;quot;0&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;        &amp;lt;contentPane name=&amp;quot;_AnonymousScreen2&amp;quot; /&amp;gt;&amp;#xD;&amp;#xA;        &amp;lt;contentPane name=&amp;quot;StartPageScreenFactory&amp;quot; /&amp;gt;&amp;#xD;&amp;#xA;      &amp;lt;/tabGroup&amp;gt;&amp;#xD;&amp;#xA;    &amp;lt;/splitPane&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;/documents&amp;gt;&amp;#xD;&amp;#xA;&amp;lt;/xamDockManager&amp;gt;" NavigationGroupToSelect="Properties" IsNavigationPaneMinimized="False" IsRibbonMinimized="False"&gt;&lt;ShellWorkspace.Screens&gt;&lt;WorkspaceScreenData PaneName="_AnonymousScreen2" ScreenFactoryKey="ApwnFormContentFactory"&gt;&lt;WorkspaceScreenData.ScreenSubject&gt;&lt;atapmaa:ApwnFormScreenSubject Key="Analysis.1-5-10-B" NavigationGroupKey="Properties"&gt;&lt;atapmaa:ApwnFormScreenSubject.ShowFormArgs&gt;&lt;atapie:ShowFormEventArgs FormProgId="MMANALYSIS_BI.MMANALYSIS_BI_INP" FormKey="Analysis.1-5-10-B" Header="1-5-10-B (BINARY)" ResultsOnly="False" PathKey="Top.appModelV8.Properties.Analysis.1-5-10-B"&gt;&lt;atapie:ShowFormEventArgs.Parameters&gt;&lt;s:String assembly:Key="id"&gt;1-5-10-B&lt;/s:String&gt;&lt;s:String assembly:Key="main"&gt;Top.appModelV8.Properties.Analysis.1-5-10-B&lt;/s:String&gt;&lt;/atapie:ShowFormEventArgs.Parameters&gt;&lt;/atapie:ShowFormEventArgs&gt;&lt;/atapmaa:ApwnFormScreenSubject.ShowFormArgs&gt;&lt;atapmaa:ApwnFormScreenSubject.PlotwizardRule&gt;&lt;apmab:ApwnPlotwizardRule ContextPath="Top.appModelV8.Properties.Analysis.1-5-10-B"&gt;&lt;apmab:ApwnPlotwizardRule.ProgId&gt;&lt;s:String&gt;WpfPLANALYSIS.RibbonPlotWizardMgr&lt;/s:String&gt;&lt;/apmab:ApwnPlotwizardRule.ProgId&gt;&lt;/apmab:ApwnPlotwizardRule&gt;&lt;/atapmaa:ApwnFormScreenSubject.PlotwizardRule&gt;&lt;/atapmaa:ApwnFormScreenSubject&gt;&lt;/WorkspaceScreenData.ScreenSubject&gt;&lt;WorkspaceScreenData.ScreenState&gt;&lt;atapmaa:ApwnFormScreenState&gt;&lt;atapmaa:ApwnFormScreenState.Parameters&gt;&lt;cxv:CxvParameter Name="main" Value="Top.appModelV8.Properties.Analysis.1-5-10-B" /&gt;&lt;cxv:CxvParameter Name="id" Value="1-5-10-B" /&gt;&lt;cxv:CxvParameter Name="extraComments_path" Value="Comments" /&gt;&lt;cxv:CxvParameter Name="extraDescription_path" Value="Input.DESCRIPTION" /&gt;&lt;cxv:CxvParameter Name="extraUnits_path" Value="Input.Unit Set" /&gt;&lt;cxv:CxvParameter Name="selected_tab" Value="tab0" /&gt;&lt;/atapmaa:ApwnFormScreenState.Parameters&gt;&lt;/atapmaa:ApwnFormScreenState&gt;&lt;/WorkspaceScreenData.ScreenState&gt;&lt;/WorkspaceScreenData&gt;&lt;WorkspaceScreenData PaneName="StartPageScreenFactory" ScreenFactoryKey="StartPageScreenFactory"&gt;&lt;WorkspaceScreenData.ScreenState&gt;&lt;ScreenState /&gt;&lt;/WorkspaceScreenData.ScreenState&gt;&lt;/WorkspaceScreenData&gt;&lt;/ShellWorkspace.Screens&gt;&lt;/ShellWorkspace&gt;&lt;/CommonShellSettings.CurrentWorkspace&gt;&lt;CommonShellSettings.SavedWorkspaces&gt;&lt;ShellWorkspaceFolder /&gt;&lt;/CommonShellSettings.SavedWorkspaces&gt;&lt;/CommonShellSettings&gt;</CommonShellSettings></FileRootSettings>
+$_END_APWNSHELL_SETTINGS
+#
